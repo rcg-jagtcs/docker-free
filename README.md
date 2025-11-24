@@ -262,3 +262,12 @@ Here is what it looks like in the _Settings_ for Windows Terminal:
 
 Voila. Because the Terminal starts an Ubuntu shell it effectively needs to start WSL too.
 
+### Note - Some TestContainer environments (for example, .NET) require the below in your WSL ~/.bashrc ###
+
+```
+export DOCKER_HOST=tcp://127.0.0.1:2376
+export DOCKER_TLS_VERIFY=1
+export DOCKER_CERT_PATH="~/.docker"
+```
+
+
